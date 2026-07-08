@@ -237,9 +237,17 @@ The variables governing the execution of the simulation script are detailed belo
 
 ## Section 3: Tutorial
 
-1. Put the input experimental data file inside the `input_experimental_files` folder. This file needs to be organized in two columns, the first will be the gate voltage, the second will be the source drain current (note that the first row will be skipped by the file reading function).
-2. Select the simulation parameters in the `FET_simulation.py` file.
-3. Run the simulation using the following commands in your terminal or command prompt:
+1. Download (clone) the repository to your local machine by running the following command in your terminal or command prompt:
+   ```bash
+   git clone [https://github.com/Rotore02/FET_SIMULATION.git](https://github.com/Rotore02/FET_SIMULATION.git)
+   ```
+   *(Note: After cloning, navigate into the downloaded folder using `cd FET_SIMULATION`)*
+
+2. Put the input experimental data file inside the `input_experimental_files` folder. This file needs to be organized in two columns, the first will be the gate voltage, the second will be the source drain current (note that the first row will be skipped by the file reading function). The name of this input file needs to be updated in the `FET_simulation.py` code, precisely in the `EXPERIMENTAL_DATA_PATH` variable.
+
+3. Select the simulation parameters in the `FET_simulation.py` file.
+
+4. Run the simulation using the following commands in your terminal or command prompt:
 
    **From inside the `FET_SIMULATION` folder:**
 
@@ -264,4 +272,5 @@ The variables governing the execution of the simulation script are detailed belo
      ```bash
      python3 FET_SIMULATION/FET_simulation.py
      ```
-4. The plots will be saved in .pdf format in the `output_files` folder.
+
+5. The plots will be saved in .pdf format in the `output_files` folder.
