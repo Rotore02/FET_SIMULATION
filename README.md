@@ -206,8 +206,8 @@ The variables governing the execution of the simulation script are detailed belo
      $$f = \text{expit}\left(-\frac{E_{j} - E_{F,\text{local}}}{k_B T}\right) = \frac{1}{1 + \exp\left(\frac{E_{j} - E_{F,\text{local}}}{k_B T}\right)}$$
   3. Computes the ensemble average net charge per dot $\langle Q^{(i)} \rangle$ across the $M$ sites, combining the structural ionized background core charge with the mobile electronic state occupancies: `averaged_charge = Q_P - (mean(s1h_occupancies) + mean(s1e_occupancies) + mean(p1e_occupancies))`.
   4. Updates the cumulative electrostatic potential to be passed to the next layer in the loop sequence using the 1D discrete Poisson equation derivation: `voltage_out = voltage_in + averaged_charge * VOLT_MULTIPLIER`.
-  5. Evaluates the hopping current across the $M$ configuration paths using the state congestion relation $n(N-n)$, scaled by the local mobility arrays and the unified geometric prefactor:
-     $$\mathtt{current\_out\_arr} = \alpha_0 \cdot \sum n_k \cdot (N_k - n_k) \cdot \mu_k$$
+  5. Evaluates the hopping current across the $M$ configuration paths using the state congestion relation $n(N - n)$, scaled by the local mobility arrays and the unified geometric prefactor: 
+      $\mathtt{current\_out\_arr} = \alpha_0 \cdot \sum n_k \cdot (N_k - n_k) \cdot \mu_k$
   6. Averages the array values across the disorder landscape to extract the single macroscopic layer current contribution: `averaged_current = np.mean(current_out_arr)`.
 * **Returns:** A tuple of computed layer values: `(averaged_current, ef_local, voltage_out, averaged_charge)`.
 
