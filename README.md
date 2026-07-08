@@ -129,7 +129,7 @@ This section details the design, parameter requirements, and structural function
 
 ### 2.1 Folder Tree Structure 
 
-FET_SIMULATION
+`FET_SIMULATION
 ├── input_experimental_files
 │   └── input_iv_file.txt
 ├── output_files
@@ -138,7 +138,7 @@ FET_SIMULATION
 │   ├── plot_linear.pdf
 │   └── plot_log.pdf
 ├── FET_simulation.py
-└── README.md
+└── README.md`
 
 ### 2.2 Unified Model Parameter Definition
 The variables governing the execution of the simulation script are detailed below, categorized by their physical domains.
