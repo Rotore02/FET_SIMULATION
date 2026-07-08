@@ -239,7 +239,7 @@ The variables governing the execution of the simulation script are detailed belo
 
 1. Download (clone) the repository to your local machine by running the following command in your terminal or command prompt:
    ```bash
-   git clone [https://github.com/Rotore02/FET_SIMULATION.git](https://github.com/Rotore02/FET_SIMULATION.git)
+   git clone https://github.com/Rotore02/FET_SIMULATION.git
    ```
    *(Note: After cloning, navigate into the downloaded folder using `cd FET_SIMULATION`)*
 
